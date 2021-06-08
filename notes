@@ -1,0 +1,5 @@
+docker-compose up -d
+
+sudo docker exec -it mqtt sh
+mosquitto_passwd -c /mosquitto/config/pwfile rtls
+docker logs --tail 50 --follow --timestamps mqtt
